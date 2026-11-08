@@ -1,261 +1,284 @@
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tammi Wooten | Child Marriage Survivor & Advocate</title>
+
+<style>
+
+:root{
+    --pink:#FF5CB8;
+    --purple:#8B5CF6;
+    --blue:#4A7DFF;
+
+    --light:#FCFBFF;
+    --white:#FFFFFF;
+    --dark:#25253D;
+    --gray:#666;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.8;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
+    color:var(--purple);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--pink);
+}
+
+/* Hero */
+
+header{
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple),
+        var(--blue)
+    );
+
+    color:white;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:120px 20px 80px;
+}
+
+.hero{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:1.8rem;
+    font-weight:300;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+}
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+
+    background:white;
+    color:var(--purple);
+
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.button:hover{
+    transform:translateY(-2px);
+}
+
+/* Sections */
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    color:var(--purple);
+    margin-bottom:40px;
+}
+
+.story{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.story p{
+    margin-bottom:20px;
+}
+
+/* Welcome Card */
 
-<header>
+.welcome{
+    max-width:1100px;
+    background:white;
+    margin:-60px auto 0;
+    padding:40px;
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    text-align:center;
+}
 
-<nav>
-<div class="logo">Tammi Wooten</div>
+/* Quote */
+
+.quote{
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple),
+        var(--blue)
+    );
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#story">My Story</a></li>
-<li><a href="#advocacy">Advocacy</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
 
-<div class="hero">
-<div class="hero-content">
+.quote blockquote{
+    max-width:900px;
+    margin:auto;
+    font-size:2rem;
+}
 
-<h1>From Survivor to Advocate</h1>
+/* Cards */
 
-<h2>Tammi Wooten</h2>
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
 
-<p>
-Texas Child Marriage Survivor • Advocate • Speaker
-</p>
+.card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
 
-<p>
-Married at 15 in Texas in 2005, I now use my lived experience
-to raise awareness about child marriage, support survivors,
-and advocate for a future where every child is protected.
-</p>
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 
-<a href="#story" class="button">Read My Story</a>
+    border-top:5px solid var(--pink);
 
-</div>
-</div>
+    transition:.3s;
+}
 
-</header>
+.card:nth-child(2){
+    border-color:var(--purple);
+}
 
-<section id="about">
+.card:nth-child(3){
+    border-color:var(--blue);
+}
 
-<h2 class="section-title">Welcome</h2>
+.card:nth-child(4){
+    border-color:var(--pink);
+}
 
-<div class="story">
+.card:hover{
+    transform:translateY(-6px);
+}
 
-<p>
-Welcome. My name is Tammi Wooten.
-</p>
+.card h3{
+    color:var(--purple);
+    margin-bottom:15px;
+}
 
-<p>
-This website exists to educate, raise awareness, support survivors,
-and encourage meaningful conversations about child marriage and its
-lifelong impact.
-</p>
+/* Contact */
 
-<p>
-My experience shaped my life, but it does not define my future.
-Today I use my voice to help others find theirs.
-</p>
+.contact{
+    background:white;
+}
 
-</div>
+.contact-card{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
 
-</section>
+    background:white;
+    padding:50px;
 
-<div class="quote">
+    border-radius:25px;
 
-<blockquote>
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
-"A child should never have to give up a childhood to become a spouse."
+.contact-btn{
+    display:inline-block;
 
-<br><br>
+    margin-top:25px;
 
-<strong>— Tammi Wooten</strong>
+    padding:15px 35px;
 
-</blockquote>
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple),
+        var(--blue)
+    );
 
-</div>
+    color:white;
+    text-decoration:none;
 
-<section id="story">
+    border-radius:50px;
+    font-weight:bold;
+}
 
-<h2 class="section-title">My Story</h2>
+.email{
+    margin-top:20px;
+    color:var(--gray);
+}
 
-<div class="story">
+/* Footer */
 
-<p>
-In 2005, I was legally married in Texas at age 15. Just three
-months later, Texas raised the minimum marriage age to 16.
-</p>
-
-<p>
-At a time when most teenagers are focused on school, friendships,
-and discovering who they are, I entered into a marriage that would
-have lasting effects on my life.
-</p>
-
-<p>
-Today, I share my experience to shine a light on the realities of
-child marriage and advocate for stronger protections for children.
-</p>
-
-</div>
-
-</section>
-
-<section id="advocacy">
-
-<h2 class="section-title">My Advocacy Work</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Survivor Voice</h3>
-<p>
-Using lived experience to educate the public and inspire change.
-</p>
-</div>
-
-<div class="card">
-<h3>Public Education</h3>
-<p>
-Sharing facts, resources, and information about child marriage and its impact.
-</p>
-</div>
-
-<div class="card">
-<h3>Mental Health Awareness</h3>
-<p>
-Bringing attention to trauma, PTSD, anxiety, depression, and healing.
-</p>
-</div>
-
-<div class="card">
-<h3>Legislative Awareness</h3>
-<p>
-Encouraging conversations about protecting children through stronger laws.
-</p>
-</div>
-
-<div class="card">
-<h3>Speaking Engagements</h3>
-<p>
-Available for conferences, community events, panels, classrooms, and podcasts.
-</p>
-</div>
-
-<div class="card">
-<h3>Community Outreach</h3>
-<p>
-Connecting survivors, advocates, educators, and supporters.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="resources">
-
-<h2 class="section-title">Resources</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Mental Health Resources</h3>
-<p>
-Access support services, counseling information, and crisis resources.
-</p>
-</div>
-
-<div class="card">
-<h3>Tahirih Justice Center</h3>
-<p>
-Learn more about survivor support and advocacy efforts.
-</p>
-</div>
-
-<div class="card">
-<h3>Join the Coalition</h3>
-<p>
-Become part of a growing movement dedicated to protecting children.
-</p>
-</div>
-
-<div class="card">
-<h3>Find My Texas Lawmaker</h3>
-<p>
-Connect directly with your elected officials.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="mission">
-
-<h2 class="section-title">My Mission</h2>
-
-<div class="story">
-
-<p>
-Every child deserves a childhood.
-</p>
-
-<p>
-My mission is to educate, inspire, and advocate for a world where
-children are protected, survivors are heard, and communities are informed.
-</p>
-
-<p>
-Through storytelling, education, and public engagement, I hope to
-help create lasting change for future generations.
-</p>
-
-</div>
-
-</section>
-
-<section class="contact-section" id="contact">
-
-<div class="contact-container">
-
-<h2>Contact Tammi</h2>
-
-<p class="contact-text">
-For media interviews, speaking engagements, survivor outreach,
-advocacy opportunities, or general inquiries, please contact me directly.
-</p>
-
-<a href="mailto:tammiscase@gmail.com?subject=Message%20for%20Tammi%20Wooten"
-class="contact-btn">
-📧 Email Tammi
-</a>
-
-<p class="email-address">
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>Tammi Wooten</h3>
-
-<p>
-Texas Child Marriage Survivor • Advocate • Speaker
-</p>
-
-<p>
-Working to raise awareness, support survivors, and protect future generations.
-</p>
-
-<p>
-📧 tammiscase@gmail.com
-</p>
-
-</footer>
-
-</body>
+footer{
+    background:var(--
